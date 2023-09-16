@@ -1,0 +1,68 @@
+/* BottomSheet Container */
+.bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #eeeeee;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 1s ease-in-out;
+   
+  }
+  
+  /* Handle Bar */
+  .bottom-sheet-handle {
+    height: 5vh;
+    background-color: #007bff;
+    cursor: grab;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  /* Content */
+  .bottom-sheet div {
+    padding: 16px;
+  }
+  
+  /* Button Container */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-top: 1px solid #ddd;
+    background-color: #eeeeee;
+  }
+  
+  /* Button Styles */
+  .button-container button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Closed State */
+  .bottom-sheet.closed {
+    height: 80px;
+  }
+  
+  /* Half-Open State */
+  .bottom-sheet.halfOpen {
+    height: 300px;
+  }
+  
+  /* Fully Open State */
+  .bottom-sheet.fullyOpen {
+    height: 600px;
+  }
+  
