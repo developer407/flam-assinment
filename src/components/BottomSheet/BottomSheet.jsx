@@ -2,10 +2,9 @@ import React, { useRef, useState } from "react";
 import "./BottomSheet.css";
 
 const BottomSheet = () => {
-  const [sheetState, setSheetState] = useState("fullyOpen");
+  const [sheetState, setSheetState] = useState("halfOpen");
   const sheetRef = useRef(null);
-  const startY = useRef(null);
-  const isDragging = useRef(false);
+
 
   const snapPoints = {
     closed: 10, // Height when closed
