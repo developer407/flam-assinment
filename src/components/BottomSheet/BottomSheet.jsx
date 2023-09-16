@@ -127,7 +127,7 @@ const BottomSheet = () => {
           eius explicabo culpa, iure atque odit dolores recusandae ipsum
           mollitia error itaque magni. Harum, temporibus facere.
         </p>
-        {sheetState==="halfOpen" && <button onClick={handleShowMore} className="showMore">
+        { <button onClick={handleShowMore} className={`showMore ${sheetState!=="halfOpen"?"hide":"show"}`}>
           show more
         </button>}
       </div>
