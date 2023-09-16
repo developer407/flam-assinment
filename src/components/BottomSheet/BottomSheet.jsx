@@ -16,12 +16,14 @@ const BottomSheet = () => {
   const toggleSheet = () => {
     if (sheetState === "closed") {
       setSheetState("halfOpen");
-    } else if (sheetState === "halfOpen") {
-      setSheetState("fullyOpen");
     } else {
       setSheetState("closed");
     }
   };
+
+  const handleShowMore=()=>{
+    setSheetState("fullyOpen")
+  }
 
   return (
     <div
@@ -30,10 +32,10 @@ const BottomSheet = () => {
       style={{ height: `${snapPoints[sheetState]}vh` }}
     >
       <div onClick={toggleSheet} className="bottom-sheet-handle">
-        {(sheetState === "closed" || sheetState === "halfOpen") && (
+        {(sheetState === "closed" ) && (
           <span>&#x25B2;</span>
         )}
-        {sheetState === "fullyOpen" && <span>&#x25BC;</span>}
+        {(sheetState === "fullyOpen" || sheetState === "halfOpen") && <span>&#x25BC;</span>}
       </div>
 
       <div className="content">
@@ -125,6 +127,9 @@ const BottomSheet = () => {
           eius explicabo culpa, iure atque odit dolores recusandae ipsum
           mollitia error itaque magni. Harum, temporibus facere.
         </p>
+        {sheetState==="halfOpen" && <button onClick={handleShowMore} className="showMore">
+          show more
+        </button>}
       </div>
     </div>
   );
